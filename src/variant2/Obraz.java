@@ -25,7 +25,7 @@ class Obraz {
 
         // for general case where symbols could be not just integers
         for(int k = 0; k < 94; k++) {
-            tab_symb[k] = (char)(k+33); // substitute symbols
+            tab_symb[k] = (char)(k + 33); // substitute symbols
         }
 
         for(int i = 0; i < n; i++) {
@@ -115,7 +115,7 @@ class Obraz {
     public void display_parallel_histogram() {
         for (int i = 0; i < 94; i++) {
             if(hist_parallel[i] > 0){
-                System.out.println(tab_symb[i] + " : " + "=".repeat(hist_parallel[i]));
+                System.out.println(Thread.currentThread().getId() + " : " + tab_symb[i] + " " + "=".repeat(hist_parallel[i]));
             }
         }
     }

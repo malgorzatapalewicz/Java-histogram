@@ -92,7 +92,7 @@ class Obraz {
         for(int i = 0; i < 94; i++) histogram[i] = 0;
     }
 
-    public synchronized void increment_parallel_histogram(int index){
+    public void increment_parallel_histogram(int index){
         this.hist_parallel[index]++;
     }
 
@@ -115,7 +115,7 @@ class Obraz {
     public void display_parallel_histogram() {
         for (int i = 0; i < 94; i++) {
             if(hist_parallel[i] > 0){
-                System.out.println(tab_symb[i] + " : " + "=".repeat(hist_parallel[i]));
+                System.out.println(tab_symb[i] + ": " + "=".repeat(hist_parallel[i]));
             }
         }
     }

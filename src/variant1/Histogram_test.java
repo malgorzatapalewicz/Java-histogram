@@ -26,15 +26,15 @@ class Histogram_test {
         for (int i = 0; i < 94; i++) {
             try {
                 threads[i].join();
-                obraz_1.print_histograms();
-                obraz_1.compare_histograms();
-                obraz_1.display_parallel_histogram();
 
             } catch (InterruptedException e) {
                 System.out.println("Thread interrupted: " + e.getMessage());
             }
         }
 
+        obraz_1.print_histograms();
+        obraz_1.compare_histograms();
+        obraz_1.display_parallel_histogram();
 
 
     }
